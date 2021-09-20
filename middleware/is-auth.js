@@ -10,6 +10,7 @@ module.exports = (req, res, next) => {
     req.isAuth = false;
     return next();
   }
+  //store token
   let decodeToken;
   try {
     decodeToken = jwt.verify(token, "SomeScreetKey");
